@@ -56,7 +56,7 @@
             
 
         function update() { 
-            while (true){
+            while (true){ // um loop infinito
                 if (passarinho.x ===100) { // se o passarinho estiver no ponto inicial 100 ele começa andar
                 passarinho.setFlip(false, false); // espelha o passarinho para a direção dele
                 passarinho.ida = true;
@@ -75,20 +75,20 @@
                 console.log ("se ele tiver maior que 100 quer dizer que ele ainda não chegou no ponto de inicio, ou seja ele tem que voltar mais, andar mais para a esquerda, por isso, -=5");
                 passarinho.x -= 5;
             } // eixo y aqui
-            if (passarinho.y <= 100) {
-                passarinho.subir = false // 
+            if (passarinho.y <= 100) { // // Se o passarinho atingiu a posição mínima no eixo y
+                passarinho.subir = false // Define que o passarinho não deve mais subir
 
-            } else if (passarinho.y > 500){
-                passarinho.subir = true
+            } else if (passarinho.y > 500){ // Se o passarinho atingiu a posição máxima no eixo y
+                passarinho.subir = true // // Define que o passarinho deve subir
             }
                 
-            if (passarinho.subir == true) {
-                passarinho.y -=3;
+            if (passarinho.subir == true) { // Se o passarinho deve subir
+                passarinho.y -=3; //Mover o passarinho para cima
 
-            } else {
-                passarinho.y +=3;
+            } else { // Caso contrário
+                passarinho.y +=3; // Move o passarinho para baixo
             }
-                break;
+                break; // sai do loop infinito 
 
             }
         }
@@ -99,5 +99,3 @@
 
 </body>
 </html>
-
-
